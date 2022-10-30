@@ -10,12 +10,12 @@ def get_count_char(str_):
                 char_dic[char] = 1
     return char_dic
 
-def get_procent_char(dict):
-    dict_copy = dict.copy()
-    list_values = dict_copy.values()
-    for char, value in dict.items():
-        dict[char] = value/sum(list_values)
-    return dict
+def get_procent_char(dict_):
+    my_dict_copy = dict_.copy()
+    list_values = my_dict_copy.values()
+    for char, value in dict_.items():
+        dict_[char] = value/sum(list_values)
+    return dict_
 
 
 
@@ -28,3 +28,4 @@ main_str = """
 test_my_function = get_count_char(main_str)
 print(test_my_function)
 print(get_procent_char(test_my_function))
+
