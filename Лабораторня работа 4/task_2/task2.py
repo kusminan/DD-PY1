@@ -1,4 +1,3 @@
-
 def get_count_char(str_):
     str_ = str_.lower()
     str_ = " ".join(str_.split())
@@ -11,6 +10,13 @@ def get_count_char(str_):
                 char_dic[char] = 1
     return char_dic
 
+def get_procent_char(dict):
+    dict_copy = dict.copy()
+    list_values = dict_copy.values()
+    for char, value in dict.items():
+        dict[char] = value/sum(list_values)
+    return dict
+
 
 
 
@@ -20,3 +26,5 @@ main_str = """
     Далее нужно отсортировать слова в алфавитном порядке, а после сортировки склеить их с помощью метода строк join. Приступим!!!!
 """
 print(get_count_char(main_str))
+g = get_count_char(main_str)
+print(get_procent_char(g))
