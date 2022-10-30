@@ -25,6 +25,6 @@ main_str = """
     В качестве разделителя для встроенного метода split будет выбран символ пробела. На выходе мы получим список отдельных слов. 
     Далее нужно отсортировать слова в алфавитном порядке, а после сортировки склеить их с помощью метода строк join. Приступим!!!!
 """
-print(get_count_char(main_str))
-g = get_count_char(main_str)
-print(get_procent_char(g))
+test_my_function = get_count_char(main_str)
+print(test_my_function)
+print(get_procent_char(test_my_function))
