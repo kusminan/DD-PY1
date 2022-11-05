@@ -1,8 +1,11 @@
-from random import sample
+from random import randint
 
 
 def get_unique_list_numbers() -> list[int]:
-    return sample(range(-10, 11), 15)
+    unique_numbers = set()
+    while len(unique_numbers) < 15:
+        unique_numbers.update(randint(-10, 10) for _ in range(1))
+    return list(unique_numbers)
 
 
 list_unique_numbers = get_unique_list_numbers()
